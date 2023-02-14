@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block menu %}
+<ul>
+  <li>Agendamento</li>
+  <li><a href="{% url 'create_doc' %}">Médicos</a></li>
+  <li><a href="{% url 'login' %}">Login</a></li>
+</ul>
+{% endblock %}
+{% block footer %}
+<ul>
+  <li>Serviços</li>
+  <li>Exames</li>
+</ul>
+{% endblock %}

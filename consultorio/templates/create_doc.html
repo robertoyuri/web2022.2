@@ -1,0 +1,21 @@
+{% extends 'menu.html' %}
+{% load static %}
+
+{% block title %}Cadastro de Médicos{% endblock %}
+
+{% block body %}
+<h1>Cadastro de Médicos</h1>
+<form>
+    <div>
+        <label>Nome do Médico:</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div>
+        <label>E-mail:</label>
+        <input type="text" name="mail" id="mail">
+    </div>
+    <div>
+        <input type="submit" value="Enviar">
+    </div>
+</form>
+{% endblock %}
