@@ -12,3 +12,6 @@ def login(request):
 
 def create_doc(request):
     return render(request, 'create_doc.html')
+
+def read_doc(request):
+    return render(request, 'read_doc.html')

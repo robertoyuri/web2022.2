@@ -18,6 +18,7 @@ h1{
 }
 
 .footer{
+    height: 200px;
     background-image:
             url("/static/image/image.jpeg");
 }
