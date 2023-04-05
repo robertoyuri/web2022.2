@@ -1,0 +1,55 @@
+{% extends 'menu.html' %}
+{% load static %}
+
+{% block title %}Lista de Persons{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h5>Nome</h5>
+    </div>
+    <div class="col">
+      <h5>CPF</h5>
+    </div>
+    <div class="col">
+      <h5>Email</h5>
+    </div>
+    <div class="col">
+      <h5>Editar</h5>
+    </div>
+    <div class="col">
+      <h5>Excluir</h5>
+    </div>
+  </div>
+
+
+{% for person in persons %}
+
+  <div class="row">
+    <div class="col">
+      <h5>{{ person.name }}</h5>
+    </div>
+    <div class="col">
+      <h5>{{ person.cpf }}</h5>
+    </div>
+    <div class="col">
+      <h5>{{ person.email }}</h5>
+    </div>
+    <div class="col">
+      <a href="update_person/{{person.id}}">Editar</a>
+    </div>
+    <div class="col">
+      <img onclick="confirmDelete(
+              '{{person.name}}','{{person.id}}')"
+           src="{% static 'image/del.png' %}"
+             height="20px">
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+
+{% endblock %}

@@ -37,3 +37,9 @@ function saveAge(){
         alert("Futuro Idoso");
     }
 }
+
+function confirmDelete(name, id){
+    if(confirm("Você tem certeza que quer deletar "+name+"?")==true){
+        window.open("delete_person/"+id,'self')
+    }
+}
